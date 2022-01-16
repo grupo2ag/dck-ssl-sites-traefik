@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  traefik:
+    image: traefik:v2.3
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - --api=true
+      - --api.dashboard=false
+      - --log.level=info
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.websecure.address=:443
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --certificatesresolvers.le.acme.email=infra.sp@emepar.com.br
+      - --certificatesresolvers.le.acme.storage=/acme.json
+      - --certificatesresolvers.le.acme.tlschallenge=true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/traefik/acme.json:/acme.json
