@@ -88,10 +88,10 @@ services:
       - HASHED_PASSWORD=$apr1$Dmv.tWeM$VzZ7uNs.E6msXOPB0l6Uy0
       - EMAIL=infra.sp@emepar.com.br
     
-    networks:
+#    networks:
       # Use the public network created to be shared between Traefik and
       # any other service that needs to be publicly available with HTTPS
-      - traefik-public
+#     - traefik-public
 
 volumes:
   # Create a volume to store the certificates, there is a constraint to make sure
@@ -99,8 +99,8 @@ volumes:
   # the HTTPS certificates
   traefik-public-certificates:
 
-networks:
+#networks:
   # Use the previously created public network "traefik-public", shared with other
   # services that need to be publicly available via this Traefik
-  traefik-public:
-    external: true
+#  traefik-public:
+#    external: true
