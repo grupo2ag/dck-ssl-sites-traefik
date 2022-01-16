@@ -80,6 +80,14 @@ services:
       - --log
       # Enable the Dashboard and API
       - --api
+    environment:
+      - DOMAIN=ypo.redesinalverde.com.br
+      - NODE_ID=tz7o5423jqi4jx90kpx4g7jtd
+      - USERNAME=admin
+      - PASSWORD=asm123sia
+      - HASHED_PASSWORD=$apr1$Dmv.tWeM$VzZ7uNs.E6msXOPB0l6Uy0
+      - EMAIL=infra.sp@emepar.com.br
+    
     networks:
       # Use the public network created to be shared between Traefik and
       # any other service that needs to be publicly available with HTTPS
