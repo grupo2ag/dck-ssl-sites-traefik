@@ -84,7 +84,7 @@ services:
       # Use the public network created to be shared between Traefik and
       # any other service that needs to be publicly available with HTTPS
       #- traefik-public
-      - ingress
+      - teste1_default
 
 volumes:
   # Create a volume to store the certificates, there is a constraint to make sure
