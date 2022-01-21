@@ -2,7 +2,7 @@ version: "3"
 
 services:
   teste:
-    image: 2agcloud/nginx-ubuntu:latest
+    image: 2agcloud/teste:1
     network_mode: "bridge"
     ports:
       - "9121:9121"
