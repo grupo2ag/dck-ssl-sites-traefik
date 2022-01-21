@@ -37,7 +37,7 @@ jobs:
           # Contexto onde está o arquivo Dockerfile, normalmente é .
           context: .
           # Qual a tag
-          tags: 2agcloud/nginx-ubuntu:${{ github.run_number }}
+          tags: 2agcloud/teste:${{ github.run_number }}
           no-cache: true
           push: true
   docker:
