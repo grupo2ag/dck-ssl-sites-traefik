@@ -2,7 +2,7 @@ version: "3"
 
 services:
   teste:
-    image: autocrivosistema/hml-ac-comunicacao-eletronica-venda-teste:43
+    image: 2agcloud/nginx-ubuntu:latest
     network_mode: "bridge"
     ports:
       - "9121:9121"
