@@ -21,7 +21,7 @@ jobs:
       - name: Teste de Variavel
         run: echo "${{ github.run_number }}" >> .env_version
       - name: Ver o arquivo
-        run: ls -Al
+        run: ls -Alh
       - name: Ver dentro do arquivo
         run: cat .env_version
 
