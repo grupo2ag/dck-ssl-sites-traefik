@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  teste:
+    image: autocrivosistema/hml-ac-comunicacao-eletronica-venda-teste:43
+    network_mode: "bridge"
+    ports:
+      - "9121:9121"
+    container_name: "teste"
