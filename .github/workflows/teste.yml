@@ -19,6 +19,9 @@ jobs:
     steps:
       # TESTE 
       - name: Teste de Variavel
-        run: echo "${{ github.run_number }}" >> .env
-        run: ls
-        run: cat .env
+        run: echo "${{ github.run_number }}" >> .env_version
+      - name: Ver o arquivo
+        run: ls -Al
+      - name: Ver dentro do arquivo
+        run: cat .env_version
+
