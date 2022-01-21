@@ -24,8 +24,8 @@ jobs:
         run: ls -Alh
       - name: Ver dentro do arquivo
         run: cat .env_version
-      - name: Subir arquivo para branch
-        run: git diff a/.env_version b/.env_version
+     # - name: Subir arquivo para branch
+     #   run: git diff a/.env_version b/.env_version
   docker:
     timeout-minutes: 10
     runs-on: ubuntu-latest
