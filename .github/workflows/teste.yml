@@ -19,6 +19,6 @@ jobs:
     steps:
       # TESTE 
       - name: Teste de Variavel
-        uses: actions/checkout@master
-        with:
-           echo "${{ github.run_number }}"         
+        run: echo "${{ github.run_number }}" >> .env
+        run: ls
+        run: cat .env
