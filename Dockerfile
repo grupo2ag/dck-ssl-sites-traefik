@@ -1,4 +1,4 @@
-FROM tiangolo/uwsgi-nginx:python3.8-alpine
+FROM python3.8-alpine
 
 COPY requirements.txt /tmp/
 
