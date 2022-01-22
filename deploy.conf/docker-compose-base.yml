@@ -1,7 +1,9 @@
 version: "3"
 
 services:
-version=00
+
+  environment:
+    - version=00
 
   teste:
     image: 2agcloud/ubuntu-base:latest
