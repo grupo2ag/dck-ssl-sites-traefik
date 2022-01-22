@@ -33,11 +33,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-
-    - name: Start containers
-      run: docker-compose -f "docker-compose.yml" up -d --build
       
-    - name: Stop containers
-      if: always()
-      run: docker-compose -f "docker-compose.yml" down
-
+    - name: Download docker-composer
+      run: wget -L https://raw.githubusercontent.com/grupo2ag/dck-ssl-sites-traefik/main/docker-compose.yml
+      
+    - name: Ver o arquivo docker
+      run: ls -Al 
+      
+    - name: Ver dentro do arquivo
+      run: more docker-compose.yml
