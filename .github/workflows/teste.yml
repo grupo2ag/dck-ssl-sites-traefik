@@ -41,4 +41,4 @@ jobs:
       run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml 
 
     - name: Atualizando o docker-compose no git
-      run:  git diff "${{ github.GITHUB_REF }}" -- docker-compose-base.yml
+      run:  git diff "${{ github.GITHUB_REF }}" -- docker-compose.yml
