@@ -38,4 +38,4 @@ jobs:
       run: ls -Al 
       
     - name: Ver dentro do arquivo
-      run: more docker-compose.yml && mv docker-compose.yml && ls -Al
+      run: more docker-compose.yml && mv docker-compose.yml docker-compose.yml--4 && ls -Al
