@@ -41,4 +41,4 @@ jobs:
       run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml 
 
     - name: Atualizando o docker-compose no git
-      run: git diff  -- docker-compose.yml && git commit -m "Atualização docker-compose"
+      run: git diff  -- docker-compose.yml && export GIT_AUTHOR_NAME="Supote 2AG" && export GIT_AUTHOR_EMAIL="suporte@grupo2ag.com.br" && git commit -m "Atualização docker-compose"
