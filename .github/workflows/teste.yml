@@ -34,9 +34,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       
-    - name: Download docker-composer
-      run: wget -L https://raw.githubusercontent.com/grupo2ag/dck-ssl-sites-traefik/main/docker-compose.yml
-      
     - name: Ver o arquivo docker
       run: ls -Al 
       
