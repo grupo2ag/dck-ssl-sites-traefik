@@ -38,7 +38,6 @@ jobs:
       run: ls -Al 
       
     - name: Preparando arquivo docker-compose.yml
-      run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml 
+      run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml && git config --global user.name "Supote 2AG" && git config --global user.email "suporte@grupo2ag.com.br" && git config --global user.password "${{ secrets.PASSWORD }}" && git checkout main && git add -f -- docker-compose.yml  && git commit -m "Atualização docker-compose" && git pull origin main && git status 
 
-    - name: Atualizando o docker-compose no git
-      run: git config --global user.name "Supote 2AG" && git config --global user.email "suporte@grupo2ag.com.br" && git config --global user.password "${{ secrets.PASSWORD }}" && git checkout main && git add -f -- docker-compose.yml  && git commit -m "Atualização docker-compose" && git pull origin main && git status 
+   
