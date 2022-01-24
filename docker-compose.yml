@@ -3,7 +3,7 @@ version: "3"
 services:
 
   environment:
-    - version="100"
+    - version="101"
 
   teste:
     image: 2agcloud/ubuntu-base:latest
