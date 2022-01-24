@@ -1,1 +1,13 @@
-teste
+version: "3"
+
+services:
+
+  environment:
+    - version="99"
+
+  teste:
+    image: 2agcloud/ubuntu-base:latest
+    network_mode: "bridge"
+    ports:
+      - "9121:9121"
+    container_name: "teste"
