@@ -41,4 +41,4 @@ jobs:
       run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml 
 
     - name: Atualizando o docker-compose no git
-      run: git config --global user.name "Supote 2AG" && git config --global user.email "suporte@grupo2ag.com.br" && git add -f -- ./docker-compose.yml && git commit -m "Atualização docker-compose" && git pull origin main && git push https://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@github.com/grupo2ag/dck-ssl-sites-traefik.git --all
+      run: git add -f -- ./docker-compose.yml && git commit -m "Atualização docker-compose" && git pull origin main && git push https://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@github.com/grupo2ag/dck-ssl-sites-traefik.git --all
