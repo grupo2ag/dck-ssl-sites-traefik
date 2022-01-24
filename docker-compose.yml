@@ -3,11 +3,11 @@ version: "3"
 services:
 
   environment:
-    - version="101"
+    - version="102"
 
   teste:
     image: 2agcloud/ubuntu-base:latest
     network_mode: "bridge"
     ports:
       - "9121:9121"
-    container_name: "teste"
+    container_name: "testeooooo"
