@@ -3,10 +3,10 @@ version: "3"
 services:
 
   environment:
-    - version="102"
+    - version="105"
 
   teste:
-    image: 2agcloud/ubuntu-base:latest
+    image: 2agcloud/ubuntu-base:${version}
     network_mode: "bridge"
     ports:
       - "9121:9121"
