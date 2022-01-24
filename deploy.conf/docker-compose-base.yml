@@ -6,7 +6,7 @@ services:
     - version=00
 
   teste:
-    image: 2agcloud/ubuntu-base:latest
+    image: 2agcloud/ubuntu-base:${version}
     network_mode: "bridge"
     ports:
       - "9121:9121"
