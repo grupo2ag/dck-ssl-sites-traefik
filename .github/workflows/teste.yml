@@ -1,12 +1,12 @@
-name: CI - deevelopment teste
+name: CI - development teste
 
 # Deve ser executado ao ocorrer um "push" ou "PR" na main
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ development ]
   pull_request:
-    branches: [ main ]
+    branches: [ development ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -40,6 +40,6 @@ jobs:
     - name: Preparando arquivo docker-compose.yml
       run: rm -Rf docker-compose.yml && cp ./deploy.conf/docker-compose-base.yml ./docker-compose.yml && sed -i 's/version=00/version="${{ github.run_number }}"/g' ./docker-compose.yml && more docker-compose.yml 
     - name: Atualizando o docker-compose no git
-      run: git config --global user.name "Supote 2AG" && git config --global user.email "suporte@grupo2ag.com.br" && git config --global user.password "${{ secrets.PASSWORD }}" && git checkout main && git add -f -- docker-compose.yml  && git commit -m "Atualização docker-compose" && git push -u https://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@github.com/grupo2ag/dck-ssl-sites-traefik.git main && git status 
+      run: git config --global user.name "Supote 2AG" && git config --global user.email "suporte@grupo2ag.com.br" && git config --global user.password "${{ secrets.PASSWORD }}" && git checkout main && git add -f -- docker-compose.yml  && git commit -m "Atualização docker-compose" && git push -u https://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@github.com/grupo2ag/dck-ssl-sites-traefik.git development && git status 
 
    
